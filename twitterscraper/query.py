@@ -100,8 +100,8 @@ def query_single_page(query, lang, pos, retry=50, from_user=False, timeout=60, u
         else:
             print('not using proxy')
             response = requests.get(url, headers=HEADER, timeout=timeout)
-        if pos is None:  # html response
-	    json_resp = response.json()
+        if pos is None: # Html response
+            json_resp = response.json()
             html = json_resp['items_html'] or ''
             #html = response.text or ''
             #json_resp = None		
